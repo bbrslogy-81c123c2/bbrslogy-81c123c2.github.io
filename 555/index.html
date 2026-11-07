@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>555 电影官网-555电影网在线观看入口_555电影官网最新电影电视剧免费看</title>
+<meta name="description" content="555 电影官网是集电影、电视剧、动漫、综艺于一体的在线观影入口，提供555电影官网最新片单、热播榜单、分类检索与追剧更新提醒，帮助观众快速找到想看的高清影片与剧集资源。">
+<meta name="keywords" content="555 电影官网,555电影网,555电影官网在线观看,555电影官网最新电影,555电影官网电视剧">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131a2b'/%3E%3Ccircle cx='24' cy='32' r='10' fill='none' stroke='%23f5b942' stroke-width='4'/%3E%3Ccircle cx='42' cy='32' r='10' fill='none' stroke='%23f5b942' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f1420;
+  --bg-soft:#151c2c;
+  --card:#1b2334;
+  --card-2:#212b40;
+  --line:#2b364d;
+  --text:#e8ecf4;
+  --muted:#9aa6bd;
+  --gold:#f5b942;
+  --gold-soft:rgba(245,185,66,.14);
+  --cyan:#4fd1c5;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.28);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:radial-gradient(1200px 600px at 15% -10%,#1d2942 0%,transparent 60%),
+             radial-gradient(900px 500px at 90% 0%,#2a2038 0%,transparent 55%),
+             var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  font-size:15px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+h1,h2,h3,h4{line-height:1.35;font-weight:700}
+section{scroll-margin-top:76px}
+
+/* 导航 */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(15,20,32,.82);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:22px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:17px;white-space:nowrap}
+.logo-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,#f5b942,#e08b2d);
+  display:grid;place-items:center;color:#131a2b;font-size:13px;font-weight:900;
+  box-shadow:0 6px 16px rgba(245,185,66,.32);
+}
+.logo span b{color:var(--gold)}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.nav-links a{
+  font-size:13.5px;color:var(--muted);padding:7px 11px;border-radius:9px;
+  transition:.18s;white-space:nowrap;
+}
+.nav-links a:hover{color:var(--gold);background:var(--gold-soft)}
+.nav-cta{
+  font-size:13px;padding:8px 16px;border-radius:10px;
+  background:linear-gradient(135deg,#f5b942,#e08b2d);color:#151c2c;font-weight:700;white-space:nowrap;
+}
+
+/* Banner */
+.hero{position:relative;padding:56px 0 44px;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-60px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(245,185,66,.16),transparent 68%);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(26px,3.4vw,40px);letter-spacing:.5px;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-desc{color:var(--muted);font-size:15px;margin-bottom:8px}
+.hero-desc strong{color:#cfd8e8;font-weight:600}
+.search-box{
+  margin-top:22px;display:flex;gap:10px;background:var(--card);
+  border:1px solid var(--line);border-radius:14px;padding:7px 7px 7px 16px;
+  box-shadow:var(--shadow);max-width:520px;
+}
+.search-box input{
+  flex:1;background:transparent;border:0;outline:0;color:var(--text);font-size:14px;
+}
+.search-box input::placeholder{color:#6d7a92}
+.search-box button{
+  border:0;cursor:pointer;padding:9px 20px;border-radius:10px;
+  background:linear-gradient(135deg,#f5b942,#e08b2d);color:#151c2c;font-weight:700;font-size:14px;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.hero-tags a{
+  font-size:12.5px;padding:6px 13px;border-radius:999px;
+  border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.02);transition:.18s;
+}
+.hero-tags a:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.hero-panel{
+  background:linear-gradient(160deg,#1e2740,#161d2e);
+  border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);
+}
+.hero-panel h3{font-size:14px;color:var(--gold);letter-spacing:1px;margin-bottom:14px}
+.hero-panel ul{list-style:none;display:grid;gap:11px}
+.hero-panel li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--muted)}
+.hero-panel li b{color:var(--text);font-weight:600}
+.hero-panel li span{color:var(--gold);font-size:12.5px;white-space:nowrap}
+
+/* 通用区块 */
+.section{padding:44px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:24px;flex-wrap:wrap}
+.sec-head h2{font-size:22px;position:relative;padding-left:14px}
+.sec-head h2::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:4px;
+  background:linear-gradient(180deg,#f5b942,#e08b2d);
+}
+.sec-head p{color:var(--muted);font-size:13.5px}
+.sec-head .more{font-size:13px;color:var(--gold);border:1px solid rgba(245,185,66,.35);padding:6px 14px;border-radius:999px}
+
+/* 卡片网格 */
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.mcard{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.22s;display:flex;flex-direction:column;
+}
+.mcard:hover{transform:translateY(-4px);border-color:rgba(245,185,66,.45);box-shadow:var(--shadow)}
+.poster{
+  height:132px;position:relative;display:flex;align-items:flex-end;padding:12px;
+  font-weight:700;font-size:15px;letter-spacing:.5px;color:#fff;
+  text-shadow:0 2px 10px rgba(0,0,0,.5);
+}
+.poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(10,14,22,.72))}
+.poster span{position:relative;z-index:2}
+.p1{background:linear-gradient(135deg,#2b3f6b,#6a3c8a)}
+.p2{background:linear-gradient(135deg,#1f5f5b,#2f8f7a)}
+.p3{background:linear-gradient(135deg,#6b2f3a,#b4553f)}
+.p4{background:linear-gradient(135deg,#3a3f6b,#5c5a9e)}
+.p5{background:linear-gradient(135deg,#5c4a1f,#a4853a)}
+.p6{background:linear-gradient(135deg,#2f4a6b,#4a7fa8)}
+.p7{background:linear-gradient(135deg,#4a2f5c,#8a4a7a)}
+.p8{background:linear-gradient(135deg,#1f4a3a,#3e8a5c)}
+.mbody{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.mtitle{font-size:15.5px;font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags i{
+  font-style:normal;font-size:11.5px;padding:2px 9px;border-radius:6px;
+  background:var(--gold-soft);color:var(--gold);
+}
+.tags i.cy{background:rgba(79,209,197,.13);color:var(--cyan)}
+.mtext{font-size:13px;color:var(--muted);line-height:1.7;flex:1}
+.mmeta{display:flex;justify-content:space-between;font-size:12px;color:#78849c;padding-top:6px;border-top:1px dashed var(--line)}
+.mmeta b{color:var(--gold);font-weight:600}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cat{
+  background:linear-gradient(150deg,#1d2639,#161d2e);border:1px solid var(--line);
+  border-radius:14px;padding:16px;transition:.2s;display:flex;gap:12px;align-items:center;
+}
+.cat:hover{transform:translateY(-3px);border-color:rgba(245,185,66,.45)}
+.cat-ico{
+  width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:none;
+  background:var(--gold-soft);color:var(--gold);font-size:15px;font-weight:800;
+}
+.cat b{display:block;font-size:14.5px}
+.cat small{color:var(--muted);font-size:12px}
+
+/* 更新列表 */
+.upd{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.upd-row{
+  display:grid;grid-template-columns:76px 1fr auto;gap:16px;align-items:center;
+  padding:14px 18px;border-bottom:1px solid var(--line);transition:.18s;
+}
+.upd-row:last-child{border-bottom:0}
+.upd-row:hover{background:var(--card-2)}
+.upd-time{font-size:12.5px;color:var(--gold);font-weight:600}
+.upd-row b{font-size:14.5px;display:block;margin-bottom:2px}
+.upd-row p{font-size:12.8px;color:var(--muted)}
+.upd-tag{font-size:11.5px;color:var(--cyan);border:1px solid rgba(79,209,197,.3);padding:3px 10px;border-radius:999px;white-space:nowrap}
+
+/* 正文 */
+.article{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.article h2{font-size:22px;margin-bottom:18px;padding-left:14px;position:relative}
+.article h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:4px;background:linear-gradient(180deg,#f5b942,#e08b2d)}
+.article h3{font-size:16.5px;margin:24px 0 10px;color:var(--gold)}
+.article p{color:#c3cddd;font-size:14.6px;margin-bottom:13px;text-align:justify}
+.article p strong{color:#e8ecf4}
+.quote{
+  border-left:3px solid var(--gold);background:rgba(245,185,66,.06);
+  padding:12px 16px;border-radius:0 10px 10px 0;color:#d5dcea;font-size:14px;margin:16px 0;
+}
+
+/* 数据看板 */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:20px;text-align:center;
+}
+.stat b{display:block;font-size:26px;color:var(--gold);letter-spacing:.5px}
+.stat small{color:var(--muted);font-size:12.5px}
+
+/* FAQ */
+.faq{display:grid;gap:12px}
+.faq details{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 18px;
+  transition:.2s;
+}
+.faq details[open]{border-color:rgba(245,185,66,.4);background:var(--card-2)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:15px 0;font-size:14.8px;font-weight:600;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--gold);font-size:16px;transition:.2s}
+.faq details[open] summary::after{content:"－"}
+.faq p{color:var(--muted);font-size:13.8px;padding:0 0 16px;line-height:1.8}
+
+/* 评论 */
+.cmt-list{display:grid;gap:14px}
+.cmt{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+}
+.cmt-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avatar{
+  width:32px;height:32px;border-radius:50%;display:grid;place-items:center;flex:none;
+  font-size:13px;font-weight:700;color:#151c2c;background:linear-gradient(135deg,#f5b942,#e08b2d);
+}
+.cmt-head b{font-size:13.5px}
+.cmt-head time{font-size:12px;color:#6d7a92;margin-left:auto}
+.cmt p{font-size:13.8px;color:#bcc6d8}
+.cmt-foot{display:flex;gap:16px;margin-top:8px;font-size:12px;color:#6d7a92}
+.cmt-foot span{cursor:pointer;transition:.15s}
+.cmt-foot span:hover{color:var(--gold)}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.news-card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.2s;
+}
+.news-card:hover{transform:translateY(-3px);border-color:rgba(245,185,66,.4)}
+.news-card time{font-size:12px;color:var(--gold)}
+.news-card h3{font-size:14.8px;margin:8px 0 8px}
+.news-card p{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* 订阅 */
+.subscribe{
+  background:linear-gradient(135deg,#1e2740,#241d33);
+  border:1px solid var(--line);border-radius:20px;padding:34px;
+  display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center;
+}
+.subscribe h2{font-size:21px;margin-bottom:8px}
+.subscribe p{color:var(--muted);font-size:14px}
+.sub-form{display:flex;gap:10px;background:rgba(10,14,22,.5);border:1px solid var(--line);border-radius:12px;padding:6px}
+.sub-form input{flex:1;background:transparent;border:0;outline:0;color:var(--text);padding:8px 10px;font-size:14px}
+.sub-form button{border:0;cursor:pointer;padding:9px 18px;border-radius:9px;background:linear-gradient(135deg,#f5b942,#e08b2d);color:#151c2c;font-weight:700;font-size:13.5px}
+
+/* 页脚 */
+footer{border-top:1px solid var(--line);background:rgba(10,14,22,.6);padding:40px 0 26px;margin-top:30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.foot-grid h4{font-size:14px;color:var(--gold);margin-bottom:12px}
+.foot-grid ul{list-style:none;display:grid;gap:8px}
+.foot-grid li,.foot-grid p{font-size:13px;color:var(--muted)}
+.foot-grid a:hover{color:var(--gold)}
+.foot-bottom{text-align:center;color:#64708a;font-size:12.5px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);line-height:1.9}
+
+/* 响应式 */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .news{grid-template-columns:1fr}
+  .subscribe{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .g4,.g3,.g2{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .upd-row{grid-template-columns:1fr;gap:4px}
+  .upd-tag{justify-self:start}
+  .article{padding:20px 16px}
+  .hero{padding:36px 0 30px}
+  .foot-grid{grid-template-columns:1fr}
+  .section{padding:32px 0}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="topbar">
+  <div class="nav-inner">
+    <a class="logo" href="/">
+      <span class="logo-mark">555</span>
+      <span>555 <b>电影官网</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/#hot">热门推荐</a>
+      <a href="/#update">最新更新</a>
+      <a href="/#cat">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">观影指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comment">影迷评论</a>
+      <a href="/#news">影视资讯</a>
+    </nav>
+    <a class="nav-cta" href="/#hot">开始观影</a>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>555 电影官网：高清电影与热门剧集的观影入口</h1>
+      <p class="hero-desc"><strong>555 电影官网</strong>把院线新片、经典老片、热播电视剧与动漫综艺集中到一个页面，按题材、地区和年份快速筛选，想看什么直接点开。</p>
+      <p class="hero-desc">从<strong>555 电影官网最新电影</strong>到每日更新的追剧清单，这里更像一个随身影院目录，帮你少走弯路、多看正片。</p>
+      <form class="search-box" onsubmit="return false;">
+        <input type="text" placeholder="搜片名、演员、导演，例如：悬疑 / 高分 / 2026 新片">
+        <button type="button">搜索影片</button>
+      </form>
+      <div class="hero-tags">
+        <a href="/#hot">院线新片</a>
+        <a href="/#hot">高分经典</a>
+        <a href="/#update">今日更新</a>
+        <a href="/#cat">悬疑犯罪</a>
+        <a href="/#cat">科幻动作</a>
+        <a href="/#cat">都市情感</a>
+        <a href="/#cat">动画动漫</a>
+        <a href="/#guide">观影顺序</a>
+        <a href="/#news">影视资讯</a>
+      </div>
+    </div>
+    <aside class="hero-panel">
+      <h3>今日热映速览</h3>
+      <ul>
+        <li><b>《雾港追凶》</b><span>悬疑 · 更新至 12 集</span></li>
+        <li><b>《星轨之外》</b><span>科幻 · 高清正片</span></li>
+        <li><b>《长夜灯火》</b><span>年代 · 全 40 集</span></li>
+        <li><b>《山海食记》</b><span>纪录片 · 4K</span></li>
+        <li><b>《少年棋局》</b><span>热血 · 完结</span></li>
+        <li><b>《回声之城》</b><span>犯罪 · 更新至 8 集</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="section" id="intro">
+  <div class="wrap">
+    <div class="article">
+      <h2>555 电影官网是什么：一个为观影者整理好的内容入口</h2>
+      <p>很多人搜索<strong>555 电影官网</strong>，真正想解决的不是"有没有一个网页"，而是"我想看的片子在哪里、值不值得看、有没有更新"。所以这个页面并不只是罗列片名，而是按照观影决策的顺序来组织内容：先看热度和口碑，再看类型和题材，最后落到具体的片单与更新提醒。</p>
+      <p>页面覆盖的内容范围比较宽。电影部分包含院线新片、网络电影、经典修复片和各类高分片单；剧集部分覆盖国产剧、海外剧、短剧和迷你剧；此外还有动漫、综艺、纪录片等专区。对于习惯先刷一遍榜单再决定看什么的人，<strong>555电影网</strong>的榜单与分类索引能省下大量翻找时间。</p>
+      <p>适合的受众大致有三类。第一类是"目标明确型"，心里已经有片名，只需要快速定位和确认清晰度、集数状态；第二类是"随便看看型"，需要一个有品味的推荐流，避免点开一堆低质内容；第三类是"追更型"，关注的是更新节奏、播出时间和下一集什么时候到。三类人的需求不同，因此页面同时提供了检索、分类、榜单、更新列表和专题解析这几种入口。</p>
+      <p>为什么值得收藏？因为影视内容的变化速度很快，新片上架、剧集更新、榜单浮动都是动态的。把<strong>555 电影官网</strong>放进收藏夹，相当于保留了一个随时可用的"影视目录页"，想不起来看什么的时候翻一翻热播和更新，比在多个平台之间来回跳转更省心。下面的热播推荐、分类入口和深度解析，都是围绕这个目的设计的。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="section" id="hot">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>555 电影官网热门推荐</h2>
+        <p>按近期讨论度与完播率整理的片单，涵盖电影、剧集与动画</p>
+      </div>
+      <a class="more" href="/#update">查看全部更新</a>
+    </div>
+    <div class="grid g3">
+      <article class="mcard">
+        <div class="poster p1"><span>雾港追凶</span></div>
+        <div class="mbody">
+          <div class="mtitle">雾港追凶</div>
+          <div class="tags"><i>悬疑</i><i>犯罪</i><i class="cy">连载中</i></div>
+          <p class="mtext">港口小城连环失踪案牵出旧年旧案，双线叙事节奏紧凑，前六集埋的伏笔在第十集集中回收。</p>
+          <div class="mmeta"><span>更新至 12 集</span><b>热度 96</b></div>
+        </div>
+      </article>
+      <article class="mcard">
+        <div class="poster p2"><span>星轨之外</span></div>
+        <div class="mbody">
+          <div class="mtitle">星轨之外</div>
+          <div class="tags"><i>科幻</i><i>冒险</i><i class="cy">高清</i></div>
+          <p class="mtext">近未来太空移民题材，视觉设计偏冷色调，主打硬核设定与家庭情感的双线推进。</p>
+          <div class="mmeta"><span>正片可看</span><b>评分 8.6</b></div>
+        </div>
+      </article>
+      <article class="mcard">
+        <div class="poster p3"><span>长夜灯火</span></div>
+        <div class="mbody">
+          <div class="mtitle">长夜灯火</div>
+          <div class="tags"><i>年代</i><i>家庭</i><i class="cy">完结</i></div>
+          <p class="mtext">以一座老厂的三十年变迁为线索，群像刻画扎实，适合喜欢慢节奏年代剧的观众一次刷完。</p>
+          <div class="mmeta"><span>全 40 集</span><b>评分 8.9</b></div>
+        </div>
+      </article>
+      <article class="mcard">
+        <div class="poster p4"><span>回声之城</span></div>
+        <div class="mbody">
+          <div class="mtitle">回声之城</div>
+          <div class="tags"><i>犯罪</i><i>剧情</i><i class="cy">连载中</i></div>
+          <p class="mtext">声音设计师卷入一桩录音证据案，题材新颖，配乐与环境音处理是全剧最大亮点之一。</p>
+          <div class="mmeta"><span>更新至 8 集</span><b>热度 88</b></div>
+        </div>
+      </article>
+      <article class="mcard">
+        <div class="poster p5"><span>山海食记</span></div>
+        <div class="mbody">
+          <div class="mtitle">山海食记</div>
+          <div class="tags"><i>纪录片</i><i>美食</i><i class="cy">4K</i></div>
+          <p class="mtext">沿着海岸线记录地方饮食与手艺人的日常，镜头克制，旁白不抢戏，适合下饭也适合细看。</p>
+          <div class="mmeta"><span>全 8 集</span><b>评分 9.1</b></div>
+        </div>
+      </article>
+      <article class="mcard">
+        <div class="poster p6"><span>少年棋局</span></div>
+        <div class="mbody">
+          <div class="mtitle">少年棋局</div>
+          <div class="tags"><i>热血</i><i>成长</i><i class="cy">完结</i></div>
+          <p class="mtext">围棋少年从县城一路打进职业赛场，赛制设计有看点，关键对局的镜头调度相当成熟。</p>
+          <div class="mmeta"><span>全 24 集</span><b>评分 8.4</b></div>
+        </div>
+      </article>
+      <article class="mcard">
+        <div class="poster p7"><span>雾中列车</span></div>
+        <div class="mbody">
+          <div class="mtitle">雾中列车</div>
+          <div class="tags"><i>文艺</i><i>剧情</i><i class="cy">新片</i></div>
+          <p class="mtext">一列夜车上的六个陌生人，用对话撑起全片，剧本扎实，属于越看越有味道的小成本佳作。</p>
+          <div class="mmeta"><span>正片可看</span><b>评分 8.2</b></div>
+        </div>
+      </article>
+      <article class="mcard">
+        <div class="poster p8"><span>荒原信号</span></div>
+        <div class="mbody">
+          <div class="mtitle">荒原信号</div>
+          <div class="tags"><i>惊悚</i><i>悬疑</i><i class="cy">新片</i></div>
+          <p class="mtext">无人区信号塔传出异常电波，前半段氛围营造出色，后半段解释略显仓促，整体值得一看。</p>
+          <div class="mmeta"><span>正片可看</span><b>热度 81</b></div>
+        </div>
+      </article>
+      <article class="mcard">
+        <div class="poster p1"><span>纸鸢与风</span></div>
+        <div class="mbody">
+          <div class="mtitle">纸鸢与风</div>
+          <div class="tags"><i>动画</i><i>治愈</i><i class="cy">连载中</i></div>
+          <p class="mtext">手绘质感的原创动画，讲述小镇少年与风筝手艺人的故事，画风干净，适合全家一起看。</p>
+          <div class="mmeta"><span>更新至 9 集</span><b>评分 8.8</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="section" id="update">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>最新更新与热播动态</h2>
+        <p>2026 年 11 月 7 日整理，追更党可重点关注</p>
+      </div>
+    </div>
+    <div class="upd">
+      <div class="upd-row"><span class="upd-time">11-07</span><div><b>雾港追凶</b><p>第 12 集上线，关键证人身份揭晓，案件方向出现反转。</p></div><span class="upd-tag">剧集更新</span></div>
+      <div class="upd-row"><span class="upd-time">11-07</span><div><b>星轨之外</b><p>4K 版本补档完成，此前反馈的音画不同步问题已修复。</p></div><span class="upd-tag">画质升级</span></div>
+      <div class="upd-row"><span class="upd-time">11-06</span><div><b>回声之城</b><p>第 8 集上线，录音证据链出现新线索，主线推进加快。</p></div><span class="upd-tag">剧集更新</span></div>
+      <div class="upd-row"><span class="upd-time">11-06</span><div><b>雾中列车</b><p>新片入库，文艺向剧情片，杜比音效版本同步上线。</p></div><span class="upd-tag">新片上架</span></div>
+      <div class="upd-row"><span class="upd-time">11-05</span><div><b>纸鸢与风</b><p>第 9 集上线，主角与师父的冲突线进入收束阶段。</p></div><span class="upd-tag">动画更新</span></div>
+      <div class="upd-row"><span class="upd-time">11-05</span><div><b>山海食记</b><p>新增幕后花絮特辑，记录拍摄团队沿海取景过程。</p></div><span class="upd-tag">特辑上线</span></div>
+      <div class="upd-row"><span class="upd-time">11-04</span><div><b>荒原信号</b><p>新片入库，惊悚悬疑类型，建议佩戴耳机观看。</p></div><span class="upd-tag">新片上架</span></div>
+      <div class="upd-row"><span class="upd-time">11-04</span><div><b>长夜灯火</b><p>全 40 集完结，结局篇上线，年代线收束完整。</p></div><span class="upd-tag">全剧完结</span></div>
+      <div class="upd-row"><span class="upd-time">11-03</span><div><b>少年棋局</b><p>职业赛篇章补档，新增两场未播出的对局片段。</p></div><span class="upd-tag">内容补档</span></div>
+      <div class="upd-row"><span class="upd-time">11-02</span><div><b>深海档案</b><p>纪录片新集上线，聚焦深海探测设备与科考日常。</p></div><span class="upd-tag">纪录片</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="section" id="cat">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>按类型找片：八大分类入口</h2>
+        <p>先定类型再选片，比漫无目的地翻页效率更高</p>
+      </div>
+    </div>
+    <div class="cat-grid">
+      <a class="cat" href="/#hot"><span class="cat-ico">悬</span><span><b>悬疑犯罪</b><small>案件推理 · 反转不断</small></span></a>
+      <a class="cat" href="/#hot"><span class="cat-ico">科</span><span><b>科幻动作</b><small>未来设定 · 视效大片</small></span></a>
+      <a class="cat" href="/#hot"><span class="cat-ico">情</span><span><b>都市情感</b><small>现实题材 · 生活流</small></span></a>
+      <a class="cat" href="/#hot"><span class="cat-ico">年</span><span><b>年代历史</b><small>群像叙事 · 时代变迁</small></span></a>
+      <a class="cat" href="/#hot"><span class="cat-ico">喜</span><span><b>喜剧合家欢</b><small>轻松下饭 · 老少皆宜</small></span></a>
+      <a class="cat" href="/#hot"><span class="cat-ico">动</span><span><b>动画动漫</b><small>原创番剧 · 治愈热血</small></span></a>
+      <a class="cat" href="/#hot"><span class="cat-ico">纪</span><span><b>纪录片</b><small>自然人文 · 真实故事</small></span></a>
+      <a class="cat" href="/#hot"><span class="cat-ico">短</span><span><b>短剧微剧</b><small>节奏明快 · 单集精悍</small></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="section" id="deep">
+  <div class="wrap">
+    <div class="article">
+      <h2>555 电影官网深度解析：观众到底在找什么</h2>
+      <p>把"<strong>555 电影官网</strong>"当成一个搜索词来看，它背后其实藏着几种差别很大的意图。有人想找某一部具体的片子，有人想找一个能稳定看片的入口，也有人只是想看看最近有什么值得追的。理解这几种意图，比单纯堆砌片名更有价值，这也是本页内容组织方式的出发点。</p>
+      <h3>一、类型偏好决定了选片路径</h3>
+      <p>悬疑犯罪类观众的耐心通常较高，愿意接受慢热铺垫，对反转的合理性要求也更高；科幻动作类观众更看重设定完整度和视效呈现，剧情逻辑可以适当让步；都市情感和年代剧的观众往往更在意人物关系的可信度，一旦角色动机立不住，弃剧率会明显上升。因此<strong>555 电影官网</strong>在推荐区没有把所有内容混在一起，而是尽量在卡片上标注类型和更新状态，让读者在点开之前就能判断"这是不是我的菜"。</p>
+      <h3>二、更新状态比评分更影响决策</h3>
+      <p>一个很现实的情况是：评分再高的剧，如果还在连载，很多人会选择先收藏等完结。反过来，一部评分中等的完结剧，反而更容易被一次性刷完。所以在<strong>555电影官网</strong>的更新列表里，"更新至第几集""全几集完结""新片上架"这类状态信息被放在了显眼位置。对追更党来说，知道下一集什么时候来，比知道这部剧有多好更重要。</p>
+      <div class="quote">选片建议：目标明确就直接搜索，没有目标就先看热播榜，追更需求就看更新列表——三条路径对应三种不同的使用习惯，不必强行统一。</div>
+      <h3>三、节奏与观看场景的匹配</h3>
+      <p>同一部片子，在通勤路上用手机看和在客厅用大屏看，体验完全不同。快节奏短剧适合碎片时间，一集十几分钟，随时可以停；氛围向的文艺片和纪录片更适合晚上安静时完整观看；科幻和动作大片则建议留出连续两小时，避免被打断。页面在推荐文案里会尽量提示"适合什么场景看"，这比单纯给一个分数更实用。</p>
+      <h3>四、同类内容之间的比较</h3>
+      <p>经常有人问：同类型的几部剧先看哪部？比较稳妥的做法是看"完成度"和"门槛"。完成度指故事是否讲完整、结局是否收得住；门槛指是否需要前置知识、是否慢热。像《雾港追凶》这类双线叙事的悬疑剧，前两集信息密度高，需要一点耐心；而《少年棋局》这种成长线清晰的作品，几乎可以从第一集直接进入。把这类差异讲清楚，比笼统地说"都很好看"更有参考价值。</p>
+      <h3>五、搜索这个词的人通常还想知道</h3>
+      <p>综合来看，搜索<strong>555 电影官网</strong>的读者最常关心的几件事是：有没有最新电影、剧集更新到哪了、某个类型有什么推荐、经典老片还能不能找到、以及有没有一个不用反复切换平台的整理页。本页的热门推荐、更新列表、分类入口和常见问题，基本覆盖了这几个方向。如果只是想随便看看，直接从热播榜开始就行；如果带着明确目标，用搜索框或者分类入口会更快。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 数据看板 -->
+<section class="section" id="data">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>站内数据速览</h2>
+        <p>以下为页面内容维度的模拟统计，用于说明内容覆盖范围</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>6800+</b><small>收录影片与剧集</small></div>
+      <div class="stat"><b>26</b><small>细分题材分类</small></div>
+      <div class="stat"><b>每日</b><small>更新与补档频率</small></div>
+      <div class="stat"><b>4K</b><small>高清画质支持</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 观影指南 -->
+<section class="section" id="guide">
+  <div class="wrap">
+    <div class="article">
+      <h2>观影体验指南：怎么用这个页面更省时间</h2>
+      <p>页面的结构是刻意做得比较"平"的，不需要层层点进去才能找到内容。顶部导航对应八个主要区块，滚动即可到达；首屏的搜索框用于精准定位；如果只是想随便看看，热播推荐和更新列表是最快的两个入口。</p>
+      <h3>按需求选择入口</h3>
+      <p>已经知道片名，用搜索框；只知道类型，用分类入口；想看最近在讨论什么，看热门推荐；在追某部剧，看最新更新；想了解某类内容值不值得看，读深度解析。五种入口对应五种常见场景，基本能覆盖大部分使用习惯。</p>
+      <h3>移动端与追更</h3>
+      <p>页面在手机上会自动收拢为单列布局，卡片、更新列表和问答都能正常阅读，不需要横向滑动。追更用户建议直接看更新列表，按日期排列，每天刷一次就能掌握进度。收藏本页之后，下次打开不用重新搜索。</p>
+      <h3>扩展浏览路径</h3>
+      <p>看完一部片子之后，通常会想找类似的。推荐卡片上的类型标签可以作为延伸线索，比如从悬疑犯罪延伸到犯罪剧情，再延伸到纪录片式的真实案件题材。这种顺着标签走的浏览方式，往往比直接搜索更容易发现意外收获，也是<strong>555 电影官网</strong>在内容组织上比较看重的一点。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>常见问题解答</h2>
+        <p>围绕选片、更新和类型偏好整理的六个高频疑问</p>
+      </div>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>555 电影官网主要收录哪些类型的内容？</summary>
+        <p>覆盖电影、电视剧、动漫、综艺和纪录片五大类。电影部分包括院线新片、网络电影和经典修复片；剧集部分以国产剧和海外剧为主，也包含短剧和迷你剧。每个大类下面还有更细的题材标签，比如悬疑犯罪、科幻动作、都市情感、年代历史等，方便按口味筛选。</p>
+      </details>
+      <details>
+        <summary>想找最新上映的电影，应该从哪里看起？</summary>
+        <p>建议先看"最新更新与热播动态"区块，新片上架会在这里以"新片上架"标签标注，并附一句简短说明。如果对类型有偏好，再结合分类入口缩小范围。热播推荐区也会定期换片，但更新列表的时效性更强，适合明确想看新片的人。</p>
+      </details>
+      <details>
+        <summary>连载中的剧集，怎么知道下一集什么时候更新？</summary>
+        <p>更新列表按日期倒序排列，每条都标了当前进度，例如"更新至 12 集"。一般来说，连载剧会保持相对固定的更新节奏，完结后会标注"全几集完结"。如果某部剧长时间没有新条目，通常意味着进入间歇期或者已经完结，可以优先考虑其他在更内容。</p>
+      </details>
+      <details>
+        <summary>悬疑和科幻类型，分别适合什么样的观众？</summary>
+        <p>悬疑犯罪类更适合愿意接受慢热铺垫、在意逻辑闭环的观众，前几集信息量大是常态，耐心看完往往有回报。科幻动作类更看重设定和视效，对剧情节奏的容忍度更高，适合想放松、追求视听刺激的观众。两类都有交叉作品，比如带悬疑结构的科幻片，选片时可以同时看两个标签。</p>
+      </details>
+      <details>
+        <summary>经典老片和高分片单还能找到吗？</summary>
+        <p>可以。页面在推荐区会穿插经典修复片和高分片单，这类内容通常标注"经典""修复"等标签。相比新片，老片的优势是口碑稳定、结局明确，适合不想踩雷的观众。如果只想看评价有保障的作品，可以优先从评分 8 分以上的条目里挑。</p>
+      </details>
+      <details>
+        <summary>手机上浏览这个页面方便吗，需要额外设置吗？</summary>
+        <p>不需要额外设置。页面采用响应式布局，在手机上会自动切换为单列显示，导航会收拢，卡片和列表都能正常阅读。追更用户建议直接看更新列表，按日期浏览效率最高。如果经常使用，可以把页面加入浏览器收藏，下次打开就能直接看到最新整理的片单。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section class="section" id="comment">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>影迷评论与讨论</h2>
+        <p>近期读者留言，观点不代表本站立场</p>
+      </div>
+    </div>
+    <div class="cmt-list">
+      <div class="cmt"><div class="cmt-head"><span class="avatar">林</span><b>林间有雾</b><time>2026-11-06</time></div><p>《雾港追凶》第 12 集那个反转我是真没猜到，前面一直以为是另一个方向。就是希望后面别烂尾，这种双线剧最怕收不住。</p><div class="cmt-foot"><span>赞 42</span><span>回复 8</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">陈</span><b>陈小舟</b><time>2026-11-06</time></div><p>星轨之外的 4K 版本终于修好了，之前音画不同步看得难受。设定挺硬的，就是节奏偏慢，急性子可能看不下去。</p><div class="cmt-foot"><span>赞 27</span><span>回复 5</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">苏</span><b>苏晚照</b><time>2026-11-05</time></div><p>长夜灯火全 40 集刷完了，年代剧里算很扎实的一部，不靠狗血撑剧情。缺点是中间有几集偏拖，可以适当快进。</p><div class="cmt-foot"><span>赞 63</span><span>回复 12</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">何</span><b>何处闻笛</b><time>2026-11-05</time></div><p>山海食记真的适合下饭，镜头很舒服，旁白也不抢戏。看完想去沿海城市转一圈，这种纪录片比美食综艺耐看多了。</p><div class="cmt-foot"><span>赞 38</span><span>回复 3</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">周</span><b>周野</b><time>2026-11-04</time></div><p>回声之城的题材挺新的，讲录音证据这块以前很少见。就是更新有点慢，一周一集等得着急。</p><div class="cmt-foot"><span>赞 19</span><span>回复 6</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">许</span><b>许一川</b><time>2026-11-04</time></div><p>少年棋局后半段的比赛拍得不错，镜头调度比想象中成熟。不过感情线有点多余，纯看下棋会更爽。</p><div class="cmt-foot"><span>赞 22</span><span>回复 4</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">安</span><b>安如素</b><time>2026-11-03</time></div><p>雾中列车属于越看越有味道那种，六个人一台戏，全靠对话撑着。喜欢快节奏的可能觉得闷，我个人挺喜欢。</p><div class="cmt-foot"><span>赞 31</span><span>回复 7</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">郑</span><b>郑有光</b><time>2026-11-03</time></div><p>荒原信号前半段氛围真的可以，后半段解释得太急了，感觉导演想讲的东西太多。整体还是推荐，戴着耳机看效果更好。</p><div class="cmt-foot"><span>赞 16</span><span>回复 2</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">白</span><b>白露未晞</b><time>2026-11-02</time></div><p>纸鸢与风的画风太干净了，手绘质感现在很少见了。剧情偏慢热，但适合睡前看一集，很治愈。</p><div class="cmt-foot"><span>赞 44</span><span>回复 9</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">顾</span><b>顾南风</b><time>2026-11-02</time></div><p>这个页面的分类做得还行，起码能按类型筛。就是希望更新列表能再加个"仅看已完结"的选项，追更太累了。</p><div class="cmt-foot"><span>赞 12</span><span>回复 3</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">沈</span><b>沈墨言</b><time>2026-11-01</time></div><p>深海档案这类纪录片是我的菜，科考设备那段拍得很细，比想象中有意思。希望多上点自然类纪录片。</p><div class="cmt-foot"><span>赞 25</span><span>回复 4</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">叶</span><b>叶知秋</b><time>2026-11-01</time></div><p>说实话有些推荐片评分虚高，看完感觉一般。不过挑片子本来就看个人口味，还是得自己试。</p><div class="cmt-foot"><span>赞 9</span><span>回复 11</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">方</span><b>方亭晚</b><time>2026-10-31</time></div><p>想问下有没有类似长夜灯火这种年代群像剧的推荐？看完有点意犹未尽，想找同类型的接着看。</p><div class="cmt-foot"><span>赞 18</span><span>回复 6</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">韩</span><b>韩照</b><time>2026-10-30</time></div><p>回声之城配乐真的好，环境音处理特别细，建议戴耳机。剧情推进稍慢，但沉浸感是够的。</p><div class="cmt-foot"><span>赞 21</span><span>回复 3</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">吴</span><b>吴小满</b><time>2026-10-29</time></div><p>手机上刷这个页面挺顺的，不卡也不乱。就是希望搜索能支持演员名字，有时候只记得演员不记得片名。</p><div class="cmt-foot"><span>赞 14</span><span>回复 5</span></div></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">程</span><b>程也</b><time>2026-10-28</time></div><p>雾港追凶别烂尾啊，前面铺垫这么好，结局要是敷衍我真的会生气。现在每周就等这一集了。</p><div class="cmt-foot"><span>赞 36</span><span>回复 8</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="section" id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>影视资讯速递</h2>
+        <p>与片单、播出和类型趋势相关的近期动态</p>
+      </div>
+    </div>
+    <div class="news">
+      <article class="news-card">
+        <time>2026-11-07</time>
+        <h3>悬疑剧集密集上线，双线叙事成主流选择</h3>
+        <p>近期多部悬疑题材剧集采用双时间线结构，观众对信息密度的接受度明显提高，慢热型作品的口碑回暖迹象较为明显。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-06</time>
+        <h3>4K 修复片单扩充，经典老片重新进入推荐区</h3>
+        <p>一批经典影片完成画质修复后重新上架，老片在年轻观众中的讨论度有所上升，修复版本在细节呈现上更接近影院观感。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-05</time>
+        <h3>纪录片题材多元化，美食与自然类最受欢迎</h3>
+        <p>纪录片板块近期的观看完成率高于平均水平，美食、自然和科考类内容最受关注，短集数、高信息密度的作品更受欢迎。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-04</time>
+        <h3>年代群像剧口碑稳定，完结后长尾效应明显</h3>
+        <p>《长夜灯火》完结后仍保持较高讨论量，说明年代群像类作品一旦口碑立住，完结后反而会迎来第二波观看高峰。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-03</time>
+        <h3>原创动画关注度上升，手绘风格回归视线</h3>
+        <p>近期几部原创动画在手绘质感上投入较多，与主流的纯 3D 路线形成差异，观众对画风辨识度的讨论明显增多。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-02</time>
+        <h3>短剧与长剧并行，观看场景决定内容选择</h3>
+        <p>短剧更适合碎片时间，长剧更依赖连续观看场景。两类内容并非替代关系，更多是观众根据时间和场景做出的不同选择。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="section" id="sub">
+  <div class="wrap">
+    <div class="subscribe">
+      <div>
+        <h2>订阅更新提醒</h2>
+        <p>留下邮箱，新片上架和剧集更新时收到提醒。不想错过追更进度的话，这一步比每天手动刷新更省事。</p>
+      </div>
+      <form class="sub-form" onsubmit="return false;">
+        <input type="email" placeholder="请输入邮箱地址">
+        <button type="button">订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>555 电影官网</h4>
+        <p>一个为观影者整理的内容入口，覆盖电影、剧集、动漫、综艺与纪录片，帮助观众按类型、口碑和更新状态快速找到想看的内容。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="/#hot">热门推荐</a></li>
+          <li><a href="/#update">最新更新</a></li>
+          <li><a href="/#cat">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>帮助与反馈</h4>
+        <ul>
+          <li><a href="/#guide">观影指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comment">影迷评论</a></li>
+          <li><a href="/#news">影视资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <ul>
+          <li><a href="/#hot">影视资源导航</a></li>
+          <li><a href="/#news">影视资讯站</a></li>
+          <li><a href="/#cat">类型片片单</a></li>
+          <li><a href="/#update">追更提醒页</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 555 电影官网 · 本站为影视内容整理与推荐页面，所有片名、评分与更新信息均为内容展示用途。</p>
+      <p>免责声明：页面内容仅供观影参考，不提供任何形式的存储与传播服务，相关版权归原权利方所有。</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
