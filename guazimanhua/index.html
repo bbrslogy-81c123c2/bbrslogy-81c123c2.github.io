@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>瓜子漫画-在线漫画阅读平台推荐_免费漫画_下拉式漫画_漫画排行</title>
+<meta name="description" content="瓜子漫画是专注在线漫画阅读与追更的内容专题页，汇总瓜子漫画热门作品、下拉式阅读体验、漫画排行榜、新番更新与题材分类，帮助漫画爱好者快速找到值得追的免费漫画与完结漫画，收藏追更不迷路。">
+<meta name="keywords" content="瓜子漫画,在线漫画阅读,免费漫画,下拉式漫画,漫画排行榜">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f5a623'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3E%E7%93%9C%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --gz-bg:#fbf7ef;
+  --gz-panel:#ffffff;
+  --gz-ink:#2b2620;
+  --gz-ink-2:#5f5648;
+  --gz-ink-3:#8d8272;
+  --gz-line:#ece3d4;
+  --gz-main:#f5a623;
+  --gz-main-d:#d9860a;
+  --gz-accent:#3f8c7a;
+  --gz-accent-soft:#e6f2ee;
+  --gz-soft:#fdf1dc;
+  --gz-shadow:0 6px 20px rgba(120,96,60,.09);
+  --gz-shadow-h:0 12px 28px rgba(120,96,60,.16);
+  --gz-r:16px;
+  --gz-max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--gz-bg);
+  color:var(--gz-ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.gz-wrap{max-width:var(--gz-max);margin:0 auto;padding:0 18px}
+.gz-sec{padding:44px 0 6px}
+.gz-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.gz-sec-head h2{font-size:24px;letter-spacing:.5px;position:relative;padding-left:16px}
+.gz-sec-head h2::before{content:"";position:absolute;left:0;top:6px;bottom:4px;width:6px;border-radius:4px;background:linear-gradient(180deg,var(--gz-main),var(--gz-accent))}
+.gz-sec-head p{color:var(--gz-ink-3);font-size:14px}
+.gz-more{font-size:14px;color:var(--gz-main-d);border:1px solid var(--gz-line);padding:6px 14px;border-radius:999px;background:#fff;transition:.2s}
+.gz-more:hover{background:var(--gz-soft);border-color:var(--gz-main)}
+
+/* nav */
+.gz-nav{position:sticky;top:0;z-index:50;background:rgba(251,247,239,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--gz-line)}
+.gz-nav-in{display:flex;align-items:center;gap:20px;height:64px}
+.gz-logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;letter-spacing:.5px;flex-shrink:0}
+.gz-logo-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gz-main),#ffd07a);display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;font-weight:900;box-shadow:0 4px 10px rgba(245,166,35,.35)}
+.gz-nav-links{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
+.gz-nav-links::-webkit-scrollbar{display:none}
+.gz-nav-links a{font-size:14.5px;color:var(--gz-ink-2);padding:8px 12px;border-radius:9px;white-space:nowrap;transition:.18s}
+.gz-nav-links a:hover{background:var(--gz-soft);color:var(--gz-main-d)}
+.gz-nav-btn{flex-shrink:0;background:var(--gz-main);color:#fff;font-size:14px;padding:9px 18px;border-radius:999px;font-weight:600;box-shadow:0 5px 14px rgba(245,166,35,.32);transition:.2s}
+.gz-nav-btn:hover{background:var(--gz-main-d)}
+
+/* banner */
+.gz-banner{position:relative;overflow:hidden;background:radial-gradient(900px 400px at 82% -10%,#ffe6b8 0,rgba(255,230,184,0) 60%),linear-gradient(160deg,#fff8ea 0,#fbf7ef 55%,#f2f8f5 100%);border-bottom:1px solid var(--gz-line)}
+.gz-banner-in{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;padding:52px 0 46px}
+.gz-badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--gz-main-d);background:#fff;border:1px solid #f6dfb4;padding:5px 13px;border-radius:999px;margin-bottom:16px}
+.gz-badge i{width:7px;height:7px;border-radius:50%;background:var(--gz-main);display:inline-block;animation:gzpulse 1.8s infinite}
+@keyframes gzpulse{0%,100%{opacity:1}50%{opacity:.35}}
+.gz-banner h1{font-size:38px;line-height:1.3;letter-spacing:.5px;margin-bottom:14px}
+.gz-banner h1 em{font-style:normal;color:var(--gz-main-d);background:linear-gradient(180deg,transparent 62%,#ffe3ad 62%)}
+.gz-banner-txt{color:var(--gz-ink-2);font-size:15.5px;margin-bottom:8px}
+.gz-banner-txt b{color:var(--gz-accent);font-weight:600}
+.gz-search{display:flex;gap:10px;margin:22px 0 18px;max-width:520px}
+.gz-search input{flex:1;border:1px solid var(--gz-line);background:#fff;border-radius:12px;padding:13px 16px;font-size:15px;color:var(--gz-ink);outline:none;transition:.2s}
+.gz-search input:focus{border-color:var(--gz-main);box-shadow:0 0 0 4px rgba(245,166,35,.14)}
+.gz-search button{border:0;background:var(--gz-main);color:#fff;font-size:15px;font-weight:600;padding:0 24px;border-radius:12px;cursor:pointer;transition:.2s}
+.gz-search button:hover{background:var(--gz-main-d)}
+.gz-quick{display:flex;flex-wrap:wrap;gap:9px}
+.gz-quick a{font-size:13.5px;color:var(--gz-ink-2);background:#fff;border:1px solid var(--gz-line);padding:7px 15px;border-radius:999px;transition:.2s}
+.gz-quick a:hover{color:var(--gz-main-d);border-color:var(--gz-main);transform:translateY(-2px)}
+.gz-banner-art{position:relative;height:300px}
+.gz-cover{position:absolute;border-radius:14px;box-shadow:0 14px 30px rgba(120,96,60,.18);background:linear-gradient(150deg,#f7b733,#e5721f);display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:700;font-size:14px;overflow:hidden}
+.gz-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.42))}
+.gz-cover span{position:relative;z-index:2}
+.gz-cover.c1{width:150px;height:200px;left:6%;top:12px;transform:rotate(-7deg);background:linear-gradient(150deg,#f7b733,#e5721f)}
+.gz-cover.c2{width:160px;height:214px;left:34%;top:56px;transform:rotate(3deg);background:linear-gradient(150deg,#4aa58f,#2f6f61);z-index:3}
+.gz-cover.c3{width:146px;height:196px;right:4%;top:26px;transform:rotate(8deg);background:linear-gradient(150deg,#8f7bdc,#5b48a8)}
+.gz-cover.c4{width:120px;height:160px;left:20%;bottom:-16px;transform:rotate(-3deg);background:linear-gradient(150deg,#ff9d76,#e2603f);z-index:4}
+
+/* intro */
+.gz-intro{display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+.gz-article{background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:var(--gz-r);padding:26px 28px;box-shadow:var(--gz-shadow)}
+.gz-article h3{font-size:18px;margin:22px 0 10px;color:var(--gz-ink)}
+.gz-article h3:first-child{margin-top:0}
+.gz-article p{color:var(--gz-ink-2);font-size:15px;margin-bottom:12px;text-align:justify}
+.gz-article p b{color:var(--gz-main-d);font-weight:600}
+.gz-side{display:flex;flex-direction:column;gap:16px}
+.gz-side-card{background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:var(--gz-r);padding:18px;box-shadow:var(--gz-shadow)}
+.gz-side-card h4{font-size:15px;margin-bottom:12px;color:var(--gz-ink)}
+.gz-side-tag{display:flex;flex-wrap:wrap;gap:8px}
+.gz-side-tag a{font-size:13px;background:var(--gz-soft);color:var(--gz-main-d);padding:5px 11px;border-radius:8px;transition:.2s}
+.gz-side-tag a:hover{background:var(--gz-main);color:#fff}
+.gz-side-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+.gz-side-list li{display:flex;gap:10px;font-size:14px;color:var(--gz-ink-2);align-items:flex-start}
+.gz-side-list li i{flex-shrink:0;width:19px;height:19px;border-radius:6px;background:var(--gz-accent-soft);color:var(--gz-accent);font-size:12px;font-style:normal;display:flex;align-items:center;justify-content:center;font-weight:700;margin-top:3px}
+
+/* cards */
+.gz-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.gz-card{background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:var(--gz-r);overflow:hidden;box-shadow:var(--gz-shadow);transition:.24s;display:flex;flex-direction:column}
+.gz-card:hover{transform:translateY(-5px);box-shadow:var(--gz-shadow-h);border-color:#f3dcb2}
+.gz-card-cover{height:132px;position:relative;display:flex;align-items:flex-end;padding:12px;color:#fff;font-weight:700;font-size:14px}
+.gz-card-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 30%,rgba(0,0,0,.5))}
+.gz-card-cover span{position:relative;z-index:2}
+.gz-card-cover i{position:absolute;top:10px;right:10px;z-index:3;font-style:normal;font-size:12px;background:rgba(255,255,255,.9);color:var(--gz-main-d);padding:3px 9px;border-radius:999px;font-weight:700}
+.gz-card-body{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.gz-card-body h3{font-size:15.5px;margin-bottom:7px;line-height:1.45}
+.gz-card-body p{font-size:13px;color:var(--gz-ink-3);line-height:1.65;flex:1;margin-bottom:11px}
+.gz-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.gz-tags em{font-style:normal;font-size:11.5px;background:#f6f1e7;color:var(--gz-ink-2);padding:2px 8px;border-radius:6px}
+.gz-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--gz-ink-3);border-top:1px dashed var(--gz-line);padding-top:9px}
+.gz-meta b{color:var(--gz-main-d);font-weight:700}
+
+/* update list */
+.gz-update{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.gz-up-row{display:flex;gap:13px;align-items:center;background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:12px;padding:13px 15px;transition:.2s}
+.gz-up-row:hover{border-color:#f3dcb2;box-shadow:var(--gz-shadow)}
+.gz-up-idx{flex-shrink:0;width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;background:var(--gz-soft);color:var(--gz-main-d)}
+.gz-up-main{flex:1;min-width:0}
+.gz-up-main h4{font-size:14.5px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gz-up-main p{font-size:12.5px;color:var(--gz-ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gz-up-time{flex-shrink:0;font-size:12px;color:var(--gz-accent);background:var(--gz-accent-soft);padding:3px 9px;border-radius:7px}
+
+/* category */
+.gz-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gz-cat{background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:14px;padding:18px;transition:.22s;position:relative;overflow:hidden}
+.gz-cat:hover{transform:translateY(-4px);border-color:var(--gz-main);box-shadow:var(--gz-shadow-h)}
+.gz-cat h3{font-size:16px;margin-bottom:6px}
+.gz-cat p{font-size:12.5px;color:var(--gz-ink-3);line-height:1.6}
+.gz-cat i{position:absolute;right:12px;top:10px;font-style:normal;font-size:26px;opacity:.12}
+
+/* deep */
+.gz-deep{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.gz-deep-block{background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:var(--gz-r);padding:24px 26px;box-shadow:var(--gz-shadow)}
+.gz-deep-block h3{font-size:17px;margin-bottom:12px;color:var(--gz-main-d);display:flex;align-items:center;gap:8px}
+.gz-deep-block h3::before{content:"";width:4px;height:16px;background:var(--gz-main);border-radius:3px}
+.gz-deep-block p{font-size:14.5px;color:var(--gz-ink-2);margin-bottom:11px;text-align:justify}
+.gz-deep-block p b{color:var(--gz-accent);font-weight:600}
+
+/* guide */
+.gz-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gz-guide-item{background:linear-gradient(160deg,#fff,#fdf7ec);border:1px solid var(--gz-line);border-radius:14px;padding:20px}
+.gz-guide-item h4{font-size:15.5px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.gz-guide-item h4 span{width:26px;height:26px;border-radius:8px;background:var(--gz-main);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.gz-guide-item p{font-size:13.5px;color:var(--gz-ink-2);line-height:1.7}
+
+/* faq */
+.gz-faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gz-faq-item{background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:13px;padding:17px 19px}
+.gz-faq-item h4{font-size:15px;margin-bottom:8px;color:var(--gz-ink);display:flex;gap:8px}
+.gz-faq-item h4 b{color:var(--gz-main-d);flex-shrink:0}
+.gz-faq-item p{font-size:13.5px;color:var(--gz-ink-2);line-height:1.72}
+
+/* comments */
+.gz-comments{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+.gz-cmt{background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:13px;padding:15px 17px;transition:.2s}
+.gz-cmt:hover{box-shadow:var(--gz-shadow)}
+.gz-cmt-top{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.gz-avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;flex-shrink:0}
+.gz-cmt-name{font-size:13.5px;font-weight:600}
+.gz-cmt-date{font-size:11.5px;color:var(--gz-ink-3);margin-left:auto}
+.gz-cmt p{font-size:13.5px;color:var(--gz-ink-2);line-height:1.7}
+
+/* news */
+.gz-news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gz-news-card{background:var(--gz-panel);border:1px solid var(--gz-line);border-radius:14px;padding:19px;transition:.22s}
+.gz-news-card:hover{transform:translateY(-4px);box-shadow:var(--gz-shadow-h)}
+.gz-news-date{font-size:12px;color:var(--gz-accent);background:var(--gz-accent-soft);display:inline-block;padding:3px 10px;border-radius:6px;margin-bottom:10px}
+.gz-news-card h4{font-size:15px;line-height:1.5;margin-bottom:8px}
+.gz-news-card p{font-size:13px;color:var(--gz-ink-3);line-height:1.68}
+
+/* footer */
+.gz-foot{background:#2b2620;color:#c9c1b4;margin-top:46px;padding:40px 0 26px}
+.gz-foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:26px}
+.gz-foot h4{color:#fff;font-size:15px;margin-bottom:13px}
+.gz-foot p{font-size:13px;line-height:1.8;color:#a79e90}
+.gz-foot ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.gz-foot ul a{font-size:13px;color:#a79e90;transition:.2s}
+.gz-foot ul a:hover{color:var(--gz-main)}
+.gz-foot-bottom{border-top:1px solid #3d372f;padding-top:18px;font-size:12.5px;color:#8a8172;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.gz-foot-logo{display:flex;align-items:center;gap:9px;font-weight:800;color:#fff;font-size:18px;margin-bottom:12px}
+
+@media(max-width:980px){
+  .gz-grid{grid-template-columns:repeat(2,1fr)}
+  .gz-cats{grid-template-columns:repeat(2,1fr)}
+  .gz-banner-in{grid-template-columns:1fr;padding:38px 0}
+  .gz-banner-art{display:none}
+  .gz-intro{grid-template-columns:1fr}
+  .gz-deep{grid-template-columns:1fr}
+  .gz-guide{grid-template-columns:1fr}
+  .gz-news{grid-template-columns:1fr}
+  .gz-foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .gz-banner h1{font-size:27px}
+  .gz-grid,.gz-update,.gz-faq,.gz-comments,.gz-cats{grid-template-columns:1fr}
+  .gz-nav-links{display:none}
+  .gz-sec{padding:32px 0 4px}
+  .gz-sec-head h2{font-size:20px}
+  .gz-article{padding:20px}
+  .gz-foot-grid{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="gz-nav">
+  <div class="gz-wrap gz-nav-in">
+    <a class="gz-logo" href="/#gz-home"><span class="gz-logo-mark">瓜</span>瓜子漫画</a>
+    <nav class="gz-nav-links">
+      <a href="/#gz-hot">热门推荐</a>
+      <a href="/#gz-update">最新更新</a>
+      <a href="/#gz-cate">题材分类</a>
+      <a href="/#gz-deep">深度解析</a>
+      <a href="/#gz-guide">阅读指南</a>
+      <a href="/#gz-faq">常见问题</a>
+      <a href="/#gz-cmt">读者评论</a>
+      <a href="/#gz-news">漫画资讯</a>
+    </nav>
+    <a class="gz-nav-btn" href="/#gz-hot">开始追更</a>
+  </div>
+</header>
+
+<section class="gz-banner" id="gz-home">
+  <div class="gz-wrap gz-banner-in">
+    <div>
+      <span class="gz-badge"><i></i>2026 年 11 月 7 日 · 更新追踪中</span>
+      <h1>瓜子漫画：在线漫画阅读与<em>下拉式追更</em>专题</h1>
+      <p class="gz-banner-txt">瓜子漫画聚合热门连载、完结佳作与题材榜单，围绕<b>下拉式阅读</b>、<b>竖屏排版</b>与<b>日更节奏</b>整理追更入口，帮你少翻页面、多看剧情。</p>
+      <p class="gz-banner-txt">从热血少年、都市逆袭到甜宠恋爱与悬疑脑洞，页面按题材和更新状态分类，适合通勤碎片阅读，也适合一次性补完。</p>
+      <form class="gz-search" onsubmit="return false;">
+        <input type="text" placeholder="搜索漫画名、作者、题材，如：下拉式 热血">
+        <button type="button">搜漫画</button>
+      </form>
+      <div class="gz-quick">
+        <a href="/#gz-hot">热血少年</a>
+        <a href="/#gz-hot">都市逆袭</a>
+        <a href="/#gz-hot">甜宠恋爱</a>
+        <a href="/#gz-cate">悬疑脑洞</a>
+        <a href="/#gz-update">今日更新</a>
+        <a href="/#gz-cate">完结漫画</a>
+        <a href="/#gz-deep">下拉式阅读</a>
+        <a href="/#gz-news">新作上线</a>
+      </div>
+    </div>
+    <div class="gz-banner-art" aria-hidden="true">
+      <div class="gz-cover c1"><span>热血少年</span></div>
+      <div class="gz-cover c2"><span>都市逆袭</span></div>
+      <div class="gz-cover c3"><span>甜宠恋爱</span></div>
+      <div class="gz-cover c4"><span>悬疑脑洞</span></div>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<section class="gz-sec" id="gz-intro">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画是什么：一个围绕阅读体验的漫画专题</h2>
+      <p>读懂页面结构，再决定从哪本开始追</p>
+    </div>
+    <div class="gz-intro">
+      <div class="gz-article">
+        <h3>从“找漫画”到“读下去”</h3>
+        <p>很多漫画读者打开搜索框时，其实并不确定自己想看什么，只知道“想找一本能一口气看下去的作品”。瓜子漫画这个专题页解决的正是这个问题：它不堆砌单一作品，而是把<b>题材分类、更新节奏、阅读方式、口碑反馈</b>放在同一个页面里，让读者先建立判断，再点进具体作品。</p>
+        <p>页面围绕瓜子漫画的内容消费场景展开，覆盖热血、都市、恋爱、悬疑、古风、校园、奇幻、治愈等常见方向，同时标注连载中、已完结、周更、日更等状态。对于习惯下拉式竖屏阅读的用户，这里也单独说明了排版与翻页逻辑，避免进入作品后才发现阅读方式不合习惯。</p>
+        <h3>适合哪些读者</h3>
+        <p>第一类是碎片时间读者，通勤、排队、睡前十分钟，需要短平快的章节和清晰的分镜；第二类是题材党，只看某一类型，希望快速筛掉不感兴趣的内容；第三类是追更型读者，关心今天更新了什么、下一话什么时候来；第四类是补完型读者，偏好已完结、能一次看到结局的作品。</p>
+        <p>瓜子漫画专题页对四类人群都做了对应入口：<b>热门推荐</b>解决“看什么”，<b>最新更新</b>解决“今天看什么”，<b>题材分类</b>解决“只看这一类”，<b>深度解析</b>解决“为什么值得看”。这样即使不点进任何作品，也能对当前漫画内容生态有一个整体印象。</p>
+        <h3>为什么值得收藏</h3>
+        <p>漫画内容更新频繁，单本作品的推荐页往往很快过期，而专题页的价值在于结构稳定、内容可替换。收藏瓜子漫画专题后，读者每次回来都能从更新列表和推荐卡片中快速定位新内容；同时 FAQ 与评论模块保留了真实读者的阅读反馈，能帮助新读者判断某类题材是否符合自己的口味。</p>
+        <p>需要说明的是，本页是内容整理与阅读指引型页面，不提供漫画文件下载，也不承诺任何作品永久可读。作品状态、更新频率会随平台调整而变化，建议以实际阅读页面为准。</p>
+      </div>
+      <aside class="gz-side">
+        <div class="gz-side-card">
+          <h4>页面速览</h4>
+          <ul class="gz-side-list">
+            <li><i>1</i><span>热门推荐：12 本不同题材作品看点</span></li>
+            <li><i>2</i><span>最新更新：今日与本周追更动态</span></li>
+            <li><i>3</i><span>题材分类：8 个方向快速筛选</span></li>
+            <li><i>4</i><span>深度解析：下拉式阅读与节奏分析</span></li>
+            <li><i>5</i><span>FAQ 与评论：真实阅读反馈参考</span></li>
+          </ul>
+        </div>
+        <div class="gz-side-card">
+          <h4>热门标签</h4>
+          <div class="gz-side-tag">
+            <a href="/#gz-cate">下拉式</a>
+            <a href="/#gz-cate">竖屏漫画</a>
+            <a href="/#gz-hot">热血</a>
+            <a href="/#gz-hot">逆袭</a>
+            <a href="/#gz-hot">甜宠</a>
+            <a href="/#gz-cate">悬疑</a>
+            <a href="/#gz-cate">古风</a>
+            <a href="/#gz-update">日更</a>
+            <a href="/#gz-cate">完结</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="gz-sec" id="gz-hot">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画热门推荐：值得先看的 12 本</h2>
+      <p>按题材分散，避免同类扎堆</p>
+    </div>
+    <div class="gz-grid">
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#f7b733,#e5721f)"><i>连载中</i><span>燃刃少年</span></div>
+        <div class="gz-card-body">
+          <h3>燃刃少年</h3>
+          <div class="gz-tags"><em>热血</em><em>少年成长</em><em>战斗</em></div>
+          <p>少年在废城觉醒刃气，靠一场场硬仗攒下同伴。分镜冲击力强，适合喜欢看打斗节奏的读者。</p>
+          <div class="gz-meta"><span>更新至 214 话</span><b>热度 9.6</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#4aa58f,#2f6f61)"><i>日更</i><span>重回十八岁那年</span></div>
+        <div class="gz-card-body">
+          <h3>重回十八岁那年</h3>
+          <div class="gz-tags"><em>都市</em><em>重生</em><em>逆袭</em></div>
+          <p>中年失意者回到高三教室，用信息差改写人生。爽点密集，章节结尾常留钩子。</p>
+          <div class="gz-meta"><span>更新至 96 话</span><b>热度 9.4</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#8f7bdc,#5b48a8)"><i>周更</i><span>她住在我的备忘录</span></div>
+        <div class="gz-card-body">
+          <h3>她住在我的备忘录</h3>
+          <div class="gz-tags"><em>甜宠</em><em>校园</em><em>双向暗恋</em></div>
+          <p>以手机备忘录为叙事线索的校园恋爱，画风清爽，情绪推进细腻，适合睡前看两话。</p>
+          <div class="gz-meta"><span>更新至 63 话</span><b>热度 9.1</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#ff9d76,#e2603f)"><i>完结</i><span>第七号档案室</span></div>
+        <div class="gz-card-body">
+          <h3>第七号档案室</h3>
+          <div class="gz-tags"><em>悬疑</em><em>单元剧</em><em>推理</em></div>
+          <p>每三话一个独立案件，主线藏在档案编号里。完结后补完体验更好，适合推理爱好者。</p>
+          <div class="gz-meta"><span>全 142 话完结</span><b>评分 9.3</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#6fa8dc,#3b6fa3)"><i>连载中</i><span>山海食肆</span></div>
+        <div class="gz-card-body">
+          <h3>山海食肆</h3>
+          <div class="gz-tags"><em>古风</em><em>美食</em><em>治愈</em></div>
+          <p>妖怪开的小饭馆，一话一道菜。故事轻，画面暖，适合不追主线、只想放松的读者。</p>
+          <div class="gz-meta"><span>更新至 78 话</span><b>热度 8.9</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#b0713f,#7d4a23)"><i>周更</i><span>我在工地当大侠</span></div>
+        <div class="gz-card-body">
+          <h3>我在工地当大侠</h3>
+          <div class="gz-tags"><em>都市</em><em>诙谐</em><em>职场</em></div>
+          <p>把武侠招式用在工地日常里，笑点接地气。适合看腻了打脸流、想换口味的读者。</p>
+          <div class="gz-meta"><span>更新至 51 话</span><b>热度 8.7</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#c86dd7,#8a3fa0)"><i>连载中</i><span>星轨拾荒人</span></div>
+        <div class="gz-card-body">
+          <h3>星轨拾荒人</h3>
+          <div class="gz-tags"><em>科幻</em><em>冒险</em><em>世界观</em></div>
+          <p>废土星球上收集残骸的少女，意外捡到一段旧文明记忆。设定扎实，适合设定党。</p>
+          <div class="gz-meta"><span>更新至 87 话</span><b>热度 9.0</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#e07a8a,#b04459)"><i>日更</i><span>替身新娘的账本</span></div>
+        <div class="gz-card-body">
+          <h3>替身新娘的账本</h3>
+          <div class="gz-tags"><em>言情</em><em>家族</em><em>反转</em></div>
+          <p>表面是替嫁，实际是查账。女主角目的明确，感情线服务于主线，节奏偏快。</p>
+          <div class="gz-meta"><span>更新至 109 话</span><b>热度 9.2</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#5aa9a0,#2f6f68)"><i>完结</i><span>猫在图书馆值班</span></div>
+        <div class="gz-card-body">
+          <h3>猫在图书馆值班</h3>
+          <div class="gz-tags"><em>治愈</em><em>日常</em><em>轻奇幻</em></div>
+          <p>一只会看书的猫陪读者度过四季，短篇结构，随便翻开一话都能看，适合压力大的时候。</p>
+          <div class="gz-meta"><span>全 60 话完结</span><b>评分 9.0</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#e8a33d,#b47014)"><i>连载中</i><span>拳台之下</span></div>
+        <div class="gz-card-body">
+          <h3>拳台之下</h3>
+          <div class="gz-tags"><em>体育</em><em>热血</em><em>逆风</em></div>
+          <p>退役拳手转做陪练，带出一个新人。比赛描写细致，适合喜欢看竞技过程而非只看得分的读者。</p>
+          <div class="gz-meta"><span>更新至 132 话</span><b>热度 8.8</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#7f8fd6,#4a5aa8)"><i>周更</i><span>深夜便利店异闻</span></div>
+        <div class="gz-card-body">
+          <h3>深夜便利店异闻</h3>
+          <div class="gz-tags"><em>悬疑</em><em>都市怪谈</em><em>短篇</em></div>
+          <p>凌晨两点后的客人都不太对劲。单元式怪谈，单话完整，适合通勤时看一话。</p>
+          <div class="gz-meta"><span>更新至 44 话</span><b>热度 8.6</b></div>
+        </div>
+      </article>
+      <article class="gz-card">
+        <div class="gz-card-cover" style="background:linear-gradient(150deg,#d98a4a,#a35a1e)"><i>连载中</i><span>我把宗门开成连锁店</span></div>
+        <div class="gz-card-body">
+          <h3>我把宗门开成连锁店</h3>
+          <div class="gz-tags"><em>仙侠</em><em>经营</em><em>轻松</em></div>
+          <p>修仙世界里的门店扩张流，把修炼资源做成会员体系。设定有趣，适合下饭阅读。</p>
+          <div class="gz-meta"><span>更新至 71 话</span><b>热度 8.5</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gz-sec" id="gz-update">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画最新更新：今日与本周追更动态</h2>
+      <p>更新时间以 2026 年 11 月 7 日为准</p>
+    </div>
+    <div class="gz-update">
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">01</span><div class="gz-up-main"><h4>燃刃少年</h4><p>第 214 话「断刃之后再燃」已上线，主线进入新篇章</p></div><span class="gz-up-time">今日</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">02</span><div class="gz-up-main"><h4>重回十八岁那年</h4><p>第 96 话更新，主角首次公开自己的创业计划</p></div><span class="gz-up-time">今日</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">03</span><div class="gz-up-main"><h4>替身新娘的账本</h4><p>第 109 话更新，账目线索指向家族旧宅</p></div><span class="gz-up-time">今日</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">04</span><div class="gz-up-main"><h4>山海食肆</h4><p>第 78 话更新，新客人带来一段旧年往事</p></div><span class="gz-up-time">昨日</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">05</span><div class="gz-up-main"><h4>星轨拾荒人</h4><p>第 87 话更新，拾荒小队抵达废弃空间站</p></div><span class="gz-up-time">昨日</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">06</span><div class="gz-up-main"><h4>拳台之下</h4><p>第 132 话更新，新人首次登上正式拳台</p></div><span class="gz-up-time">2 天前</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">07</span><div class="gz-up-main"><h4>深夜便利店异闻</h4><p>第 44 话更新，本周怪谈主题为「回声」</p></div><span class="gz-up-time">2 天前</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">08</span><div class="gz-up-main"><h4>我把宗门开成连锁店</h4><p>第 71 话更新，第二家分店选址确定</p></div><span class="gz-up-time">3 天前</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">09</span><div class="gz-up-main"><h4>她住在我的备忘录</h4><p>第 63 话更新，备忘录时间线出现矛盾</p></div><span class="gz-up-time">3 天前</span></a>
+      <a class="gz-up-row" href="/#gz-hot"><span class="gz-up-idx">10</span><div class="gz-up-main"><h4>我在工地当大侠</h4><p>第 51 话更新，新角色带来一段旧识关系</p></div><span class="gz-up-time">4 天前</span></a>
+      <a class="gz-up-row" href="/#gz-cate"><span class="gz-up-idx">11</span><div class="gz-up-main"><h4>第七号档案室</h4><p>完结后追加番外，补完主线未解释的编号</p></div><span class="gz-up-time">5 天前</span></a>
+      <a class="gz-up-row" href="/#gz-cate"><span class="gz-up-idx">12</span><div class="gz-up-main"><h4>猫在图书馆值班</h4><p>完结纪念短篇上线，四季主题合辑可一次看完</p></div><span class="gz-up-time">6 天前</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="gz-sec" id="gz-cate">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画题材分类：8 个方向快速筛选</h2>
+      <p>按阅读偏好挑，而不是按热度盲点</p>
+    </div>
+    <div class="gz-cats">
+      <a class="gz-cat" href="/#gz-hot"><i>🔥</i><h3>热血少年</h3><p>成长、战斗、伙伴与目标感，适合喜欢强冲突和分镜张力的读者。</p></a>
+      <a class="gz-cat" href="/#gz-hot"><i>🏙</i><h3>都市逆袭</h3><p>重生、职场、身份反转，章节钩子密集，适合碎片时间连续阅读。</p></a>
+      <a class="gz-cat" href="/#gz-hot"><i>💗</i><h3>甜宠恋爱</h3><p>校园、双向暗恋、日常心动，情绪平缓，适合睡前看两话。</p></a>
+      <a class="gz-cat" href="/#gz-hot"><i>🕵</i><h3>悬疑脑洞</h3><p>单元案件、都市怪谈、设定反转，适合喜欢边看边推线索的读者。</p></a>
+      <a class="gz-cat" href="/#gz-hot"><i>🏮</i><h3>古风仙侠</h3><p>门派、江湖、经营与修行，世界观看重，适合慢慢补完。</p></a>
+      <a class="gz-cat" href="/#gz-hot"><i>🚀</i><h3>科幻冒险</h3><p>废土、星际、机械设定，适合设定党与喜欢探索感的读者。</p></a>
+      <a class="gz-cat" href="/#gz-hot"><i>🌿</i><h3>治愈日常</h3><p>美食、动物、短篇生活流，单话完整，不追主线也能看。</p></a>
+      <a class="gz-cat" href="/#gz-update"><i>✅</i><h3>完结可补</h3><p>已完结或接近完结的作品集中入口，适合想一次看到结局的补完型读者。</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="gz-sec" id="gz-deep">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画深度解析：下拉式阅读与内容节奏</h2>
+      <p>为什么同样是看漫画，体验差别会这么大</p>
+    </div>
+    <div class="gz-deep">
+      <div class="gz-deep-block">
+        <h3>下拉式阅读改变了什么</h3>
+        <p>瓜子漫画这类专题页反复提到下拉式，是因为它直接决定了阅读节奏。传统翻页漫画以“页”为单位设计悬念，读者翻页前的停顿本身就是节奏；而下拉式竖屏阅读把页面拉长，分镜之间的留白被压缩，信息密度更高，读者的手指几乎不停。</p>
+        <p>这带来两个结果：一是<b>爽点必须更快出现</b>，单话前几屏如果抓不住人，读者很容易滑走；二是<b>章节需要更短的钩子</b>，很多作品把一话拆成多个小高潮，而不是只在结尾留悬念。理解这一点，就能明白为什么有些作品在纸面上好看，做成下拉式却显得拖沓。</p>
+        <p>对读者来说，判断一本下拉式漫画是否适合自己，可以看三个信号：前 20 屏有没有明确的冲突；分镜是否以纵向视线为主；文字气泡有没有堆在角落。如果三者都满足，通常读起来会比较顺。</p>
+        <h3>题材与节奏的匹配关系</h3>
+        <p>热血与体育类更适合下拉式，因为动作连续性强，纵向滑动能模拟视线下移的动势；都市逆袭类依赖信息差和反转，节奏靠短句和表情特写撑起来；甜宠与治愈类则更考验画面留白，如果分镜太挤，反而会削弱情绪。</p>
+        <p>悬疑类在瓜子漫画里是特殊的存在：它需要读者停下来思考，所以好的悬疑漫画会在关键线索处主动“减速”，用大格画面或静帧给读者留出推理时间。这也是为什么同一部悬疑作品，有人觉得烧脑，有人觉得拖——节奏感受和阅读习惯强相关。</p>
+      </div>
+      <div class="gz-deep-block">
+        <h3>角色分析：读者到底在追什么</h3>
+        <p>漫画读者对角色的耐心，比想象中更短。前几话如果没有建立清晰的“目标 + 阻碍”，角色就只是画风的一部分。瓜子漫画热门作品里，能长期留在推荐位的角色通常具备三个特征：<b>动机具体</b>、<b>能力有边界</b>、<b>关系有张力</b>。</p>
+        <p>动机具体，指的是角色知道自己要什么，而不是被剧情推着走；能力有边界，意味着主角不能一路平推，否则冲突会失效；关系有张力，则要求配角不是工具人，而是能改变主角判断的存在。像《燃刃少年》的同伴线、《拳台之下》的师徒线，都是靠关系推动成长，而不是靠数值升级。</p>
+        <p>反过来看，一些更新很快但口碑一般的作品，问题往往出在角色动机模糊：主角一直在做事，但读者说不清他为什么非做不可。这类作品适合消磨时间，但不适合长期追更。</p>
+        <h3>同类内容比较与选择建议</h3>
+        <p>如果你偏好强节奏，优先看热血、体育、都市逆袭；如果更看重情绪和画面，治愈、甜宠、古风更合适；如果喜欢边看边想，悬疑和科幻设定类会更对味。瓜子漫画专题页把这几类分开陈列，就是为了减少“点进去才发现不对味”的试错成本。</p>
+        <p>另一个实用建议是：先看更新状态。日更作品适合追，但单话信息量往往偏少；周更作品单话更厚，适合一次看个够；完结作品最适合补完，不用担心断更。读者搜索瓜子漫画时，很多时候真正想问的是“有没有能一口气看完的”，这也是页面把完结分类单独列出的原因。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gz-sec" id="gz-guide">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画阅读指南：把专题页用起来</h2>
+      <p>不夸张承诺，只讲页面能提供的实际帮助</p>
+    </div>
+    <div class="gz-guide">
+      <div class="gz-guide-item">
+        <h4><span>1</span>结构清晰，先看再点</h4>
+        <p>页面按“推荐—更新—分类—解析—问答”的顺序排布，读者可以先建立整体印象，再决定点进哪一本，减少无效跳转。</p>
+      </div>
+      <div class="gz-guide-item">
+        <h4><span>2</span>分类筛选方便</h4>
+        <p>八个题材入口覆盖主流阅读偏好，配合连载中、日更、完结等状态标注，能快速排除不合口味的作品。</p>
+      </div>
+      <div class="gz-guide-item">
+        <h4><span>3</span>移动端友好</h4>
+        <p>页面采用响应式布局，手机端单列阅读，卡片信息不挤压，适合通勤路上单手浏览。</p>
+      </div>
+      <div class="gz-guide-item">
+        <h4><span>4</span>适合追更与收藏</h4>
+        <p>更新列表按时间排布，标注“今日”“昨日”“几天前”，方便追更型读者快速确认是否有新内容。</p>
+      </div>
+      <div class="gz-guide-item">
+        <h4><span>5</span>推荐能扩展浏览路径</h4>
+        <p>每张卡片附带题材标签与简短看点，读者可以从一本作品顺藤摸瓜找到同类，形成自己的阅读清单。</p>
+      </div>
+      <div class="gz-guide-item">
+        <h4><span>6</span>评论与问答做参考</h4>
+        <p>FAQ 与读者评论提供真实阅读反馈，包含正面与中性评价，帮助新读者判断作品是否符合预期。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gz-sec" id="gz-faq">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画常见问题</h2>
+      <p>围绕阅读方式、题材选择与更新节奏</p>
+    </div>
+    <div class="gz-faq">
+      <div class="gz-faq-item">
+        <h4><b>Q1</b>瓜子漫画专题页是阅读平台本身吗？</h4>
+        <p>不是。本页是内容整理与阅读指引型专题，围绕漫画题材、更新状态与阅读体验做聚合说明，不直接提供漫画文件。具体作品的实际阅读入口、章节状态与更新频率，请以对应平台的阅读页面为准。</p>
+      </div>
+      <div class="gz-faq-item">
+        <h4><b>Q2</b>下拉式漫画和传统翻页漫画有什么区别？</h4>
+        <p>下拉式以纵向滑动为单位，分镜连续、信息密度高，适合手机竖屏；传统翻页以页为单位，节奏更依赖翻页停顿。前者爽点出现更快，后者更适合控制悬念节奏。选择哪种，主要看你的阅读场景和设备习惯。</p>
+      </div>
+      <div class="gz-faq-item">
+        <h4><b>Q3</b>第一次看，应该从哪本开始？</h4>
+        <p>如果只想轻松看，建议从治愈日常或甜宠恋爱入手，单话完整、压力小；如果想找强节奏，选热血或都市逆袭；如果喜欢推理，直接看悬疑单元剧。先确定阅读目的，再按题材筛选，比按热度盲选更省时间。</p>
+      </div>
+      <div class="gz-faq-item">
+        <h4><b>Q4</b>怎么判断一本漫画值不值得追更？</h4>
+        <p>看三点：前几话是否建立清晰目标和阻碍；单话结尾有没有让人想点下一话的钩子；角色关系是否能持续产生变化。三者都具备，通常可以放心追；如果只有画风好看但剧情推进慢，更适合等完结后一次补完。</p>
+      </div>
+      <div class="gz-faq-item">
+        <h4><b>Q5</b>完结漫画和连载漫画，阅读体验差别大吗？</h4>
+        <p>差别主要在节奏感受。连载作品单话信息量受更新周期限制，追更时容易觉得“不过瘾”；完结作品可以连续阅读，伏笔回收更完整。如果你讨厌断更焦虑，优先选已完结或接近完结的作品。</p>
+      </div>
+      <div class="gz-faq-item">
+        <h4><b>Q6</b>页面里的热度和评分是怎么理解？</h4>
+        <p>热度与评分是页面用于辅助筛选的参考值，反映的是题材关注度与读者讨论活跃程度，不等同于作品质量排名。不同题材的受众规模差异很大，冷门题材的高评分同样值得关注，建议结合看点描述和评论综合判断。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gz-sec" id="gz-cmt">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画读者评论：真实阅读反馈</h2>
+      <p>近 30 天读者留言摘选</p>
+    </div>
+    <div class="gz-comments">
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#e5721f">阿</span><span class="gz-cmt-name">阿柚不熬夜</span><span class="gz-cmt-date">11-06</span></div><p>《燃刃少年》新话打斗分镜真的顶，下拉式一路滑下去很顺，就是等更太煎熬了。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#3f8c7a">林</span><span class="gz-cmt-name">林间有雾</span><span class="gz-cmt-date">11-06</span></div><p>本来只想找本下饭的，结果把《山海食肆》一口气看到最新，画风太舒服了。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#5b48a8">小</span><span class="gz-cmt-name">小满在追更</span><span class="gz-cmt-date">11-05</span></div><p>《她住在我的备忘录》节奏偏慢，喜欢快节奏的可能看不下去，但情绪真的细腻。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#b04459">陈</span><span class="gz-cmt-name">陈年旧账本</span><span class="gz-cmt-date">11-05</span></div><p>替身新娘那本前面有点套路，看到查账主线起来之后才好看，建议坚持到二十话。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#3b6fa3">北</span><span class="gz-cmt-name">北纬三十度</span><span class="gz-cmt-date">11-04</span></div><p>第七号档案室完结了才看，体验确实好，单元案件加主线编号，推理党可以冲。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#d9860a">麦</span><span class="gz-cmt-name">麦田与猫</span><span class="gz-cmt-date">11-04</span></div><p>《猫在图书馆值班》适合压力大的时候翻两话，短篇结构不用记剧情，很省心。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#7d4a23">老</span><span class="gz-cmt-name">老周看漫画</span><span class="gz-cmt-date">11-03</span></div><p>工地大侠那本笑点有点无厘头，看个人口味，我是当解压看的，不太在意逻辑。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#2f6f68">一</span><span class="gz-cmt-name">一页不落</span><span class="gz-cmt-date">11-03</span></div><p>星轨拾荒人的设定很扎实，就是更新有点慢，建议攒几话一起看。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#8a3fa0">夏</span><span class="gz-cmt-name">夏夜有风</span><span class="gz-cmt-date">11-02</span></div><p>拳台之下比赛描写很认真，不是只靠喊口号赢，这点比很多体育漫强。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#a35a1e">路</span><span class="gz-cmt-name">路过的补完党</span><span class="gz-cmt-date">11-02</span></div><p>求多推荐一些完结的，追更太累了，看到一半断更真的会弃。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#4a5aa8">半</span><span class="gz-cmt-name">半糖去冰</span><span class="gz-cmt-date">11-01</span></div><p>深夜便利店异闻单话完整，通勤看一话刚好，就是有点吓人，晚上别关灯看。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#e2603f">大</span><span class="gz-cmt-name">大橘为重</span><span class="gz-cmt-date">10-31</span></div><p>重回十八岁那本信息差用得挺巧，但感情线有点慢，我更想看创业线。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#3f8c7a">青</span><span class="gz-cmt-name">青柠气泡</span><span class="gz-cmt-date">10-30</span></div><p>页面分类做得不错，我一般直接点悬疑，不用一本本翻简介。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#b47014">九</span><span class="gz-cmt-name">九号读者</span><span class="gz-cmt-date">10-29</span></div><p>宗门连锁店设定新鲜，但后期有点重复，希望能换个经营思路。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#5b48a8">南</span><span class="gz-cmt-name">南风知我意</span><span class="gz-cmt-date">10-28</span></div><p>甜宠类推荐太少了，希望多补几本校园的，最近就爱看这种。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#d9860a">追</span><span class="gz-cmt-name">追更不睡觉</span><span class="gz-cmt-date">10-27</span></div><p>日更作品是真的爽，每天睡前看两话，已经成习惯了。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#3b6fa3">冷</span><span class="gz-cmt-name">冷静的鱼</span><span class="gz-cmt-date">10-26</span></div><p>热度高的不一定适合自己，我按题材筛完再点，踩雷少了很多。</p></div>
+      <div class="gz-cmt"><div class="gz-cmt-top"><span class="gz-avatar" style="background:#b04459">默</span><span class="gz-cmt-name">默读三遍</span><span class="gz-cmt-date">10-25</span></div><p>希望更新列表能标注具体几点更新，有时候等到半夜也没等到。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gz-sec" id="gz-news">
+  <div class="gz-wrap">
+    <div class="gz-sec-head">
+      <h2>瓜子漫画相关资讯</h2>
+      <p>更新动态、题材趋势与阅读方式观察</p>
+    </div>
+    <div class="gz-news">
+      <article class="gz-news-card">
+        <span class="gz-news-date">2026-11-06</span>
+        <h4>下拉式竖屏漫画继续扩张，短章节成为主流选择</h4>
+        <p>越来越多作品采用下拉式排版，单话信息量重新分配，前三屏成为决定留存的关键位置，读者阅读习惯也在随之改变。</p>
+      </article>
+      <article class="gz-news-card">
+        <span class="gz-news-date">2026-11-04</span>
+        <h4>都市逆袭题材热度回升，重生线之外出现新变体</h4>
+        <p>除传统重生逆袭外，职场经营、行业揭秘类作品开始增多，主角目标更具体，冲突从家庭扩展到职业场景。</p>
+      </article>
+      <article class="gz-news-card">
+        <span class="gz-news-date">2026-11-02</span>
+        <h4>完结漫画补完需求上升，读者更看重伏笔回收完整度</h4>
+        <p>补完型读者占比提高，作品是否能在结局回收主线伏笔，逐渐成为评价完结漫画的重要维度。</p>
+      </article>
+      <article class="gz-news-card">
+        <span class="gz-news-date">2026-10-30</span>
+        <h4>治愈日常类短篇受通勤读者欢迎，单话完整结构成优势</h4>
+        <p>美食、动物、生活流短篇在碎片时间场景中表现稳定，读者无需记忆长线剧情，随时可以开始或停下。</p>
+      </article>
+      <article class="gz-news-card">
+        <span class="gz-news-date">2026-10-27</span>
+        <h4>悬疑单元剧尝试“主动减速”分镜，留给读者推理空间</h4>
+        <p>部分悬疑作品在关键线索处使用大格静帧，刻意放慢阅读速度，试图在快速滑动的阅读环境中保留推理乐趣。</p>
+      </article>
+      <article class="gz-news-card">
+        <span class="gz-news-date">2026-10-24</span>
+        <h4>体育漫画回归过程描写，比赛细节成为讨论焦点</h4>
+        <p>读者对只看得分的竞技叙事兴趣下降，训练、战术与心理变化的描写比重上升，师徒关系线更受关注。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="gz-foot">
+  <div class="gz-wrap">
+    <div class="gz-foot-grid">
+      <div>
+        <div class="gz-foot-logo"><span class="gz-logo-mark">瓜</span>瓜子漫画</div>
+        <p>瓜子漫画是面向漫画爱好者的内容专题页，聚合题材分类、更新动态、阅读方式解析与读者反馈，帮助读者更高效地筛选与追更。页面内容为整理与指引性质，不提供漫画文件存储或下载服务。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="/#gz-hot">热门推荐</a></li>
+          <li><a href="/#gz-update">最新更新</a></li>
+          <li><a href="/#gz-cate">题材分类</a></li>
+          <li><a href="/#gz-deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读参考</h4>
+        <ul>
+          <li><a href="/#gz-guide">阅读指南</a></li>
+          <li><a href="/#gz-faq">常见问题</a></li>
+          <li><a href="/#gz-cmt">读者评论</a></li>
+          <li><a href="/#gz-news">漫画资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <ul>
+          <li><a href="/#gz-home">内容首页</a></li>
+          <li><a href="/#gz-intro">专题介绍</a></li>
+          <li><a href="/#gz-cate">分类索引</a></li>
+          <li><a href="/#gz-update">更新日历</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="gz-foot-bottom">
+      <span>© 2026 瓜子漫画内容专题页 · 内容仅供阅读参考</span>
+      <span>免责声明：本页为内容整理与阅读指引页面，作品状态与更新频率以实际阅读平台为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
